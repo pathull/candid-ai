@@ -26,6 +26,7 @@ export default function Home() {
 
       setResult(data.result);
       setQuestionInput("");
+      setFormCharCount("0");
     } catch (error) {
       // Consider implementing your own error handling logic here
       console.error(error);
