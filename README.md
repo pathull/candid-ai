@@ -11,7 +11,7 @@ Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, j
 3. Navigate into the project directory
 
    ```bash
-   $ cd openai-quickstart-node
+   $ cd candid-ai
    ```
 
 4. Install the requirements
