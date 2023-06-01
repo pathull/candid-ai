@@ -39,7 +39,7 @@ export default async function (req, res) {
       {
         model: 'gpt-3.5-turbo',
         messages: [
-          { role: 'system', content: 'You are a fact checker. Respond to user strictly with "True" or "False" or "I Don\'t Know."' },
+          { role: 'system', content: 'You are a simple fact checker. You can respond only with the following case-sensitive phrases: "True" or "False" or "I Don\'t Know.".' },
           { role: 'user', content: question },
         ],
       },

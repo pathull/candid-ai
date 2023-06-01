@@ -24,7 +24,13 @@ export default function Home() {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
 
-      setResult(data.result);
+      if (data.result[0] === "F") {
+        setResult("False.")
+      } else if (data.result[0] === "T") {
+        setResult("True.")
+      } else {
+        setResult("I Don't Know.")
+      }
       setQuestionInput("");
       setFormCharCount("0");
     } catch (error) {
@@ -53,7 +59,6 @@ export default function Home() {
     }
   }, [result]);
 
-
   return (
     <div style={{ width: "100%", height: "97vh", backgroundColor: "#353740" }}>
       <Head>
@@ -78,7 +83,6 @@ export default function Home() {
           <p className={styles.counter}>{formCharCount}/50</p>
           <input type="submit" value="Generate Answer" />
         </form>
-
         <h2 className={styles.result}>{result}</h2>
         <div>{img && <img style={{ width: 100, height: 100 }} src={img} alt={result} />}</div>
       </main>
