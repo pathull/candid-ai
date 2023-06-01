@@ -37,7 +37,7 @@ export default function Home() {
   function formFunction(e) {
     setQuestionInput(e.target.value)
     setFormCharCount(e.target.value.length.toString())
-    if (formCharCount === "1") {
+    if (Number(formCharCount) > 1) {
       setResult("")
       setImg("")
     }

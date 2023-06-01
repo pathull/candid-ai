@@ -68,8 +68,9 @@ export default async function (req, res) {
 function generatePrompt(question) {
   const capitalizedQuestion =
     question[0].toUpperCase() + question.slice(1).toLowerCase();
-  return `Answer only with exact phrases "True" or "False" or "I Don't Know." to the following prompt.
-
+  return `
   Prompt: ${capitalizedQuestion}
+
+  Read above prompt and fact check only with exact phrases "True" or "False" or "I Don't Know.".
 `;
 }
