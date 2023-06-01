@@ -44,11 +44,11 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (result === "\nTrue") {
+    if (result === "True.") {
       setImg("/true.png");
-    } else if (result === "\nFalse") {
+    } else if (result === "False.") {
       setImg("/falsey.png");
-    } else if (result === "\nI Don't Know.") {
+    } else if (result === "I Don't Know.") {
       setImg("/pngwing.png");
     }
   }, [result]);

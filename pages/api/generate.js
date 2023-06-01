@@ -1,14 +1,9 @@
-import { Configuration, OpenAIApi } from "openai";
+import axios from 'axios';
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-
-let totalApiCost = 0; // Track the total API usage cost
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 export default async function (req, res) {
-  if (!configuration.apiKey) {
+  if (!OPENAI_API_KEY) {
     res.status(500).json({
       error: {
         message: "OpenAI API key not configured, please follow instructions in README.md",
@@ -27,6 +22,8 @@ export default async function (req, res) {
     return;
   }
 
+  let totalApiCost = 0; // Track the total API usage cost
+
   if (totalApiCost >= 100) {
     res.status(402).json({
       error: {
@@ -37,19 +34,32 @@ export default async function (req, res) {
   }
 
   try {
-    const completion = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: generatePrompt(question),
-      temperature: 0.6,
-    });
+    const response = await axios.post(
+      'https://api.openai.com/v1/chat/completions',
+      {
+        model: 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: 'You are a fact checker. Respond to user strictly with "True" or "False" or "I Don\'t Know."' },
+          { role: 'user', content: question },
+        ],
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
+        },
+      }
+    );
+
+    const completion = response.data.choices[0].message.content;
 
     // Calculate the API usage cost and update the total cost
-    const tokensUsed = completion.data.usage.total_tokens;
+    const tokensUsed = response.headers['x-usage-tokens'];
     const costPerToken = 0.06;
     const apiCost = (tokensUsed / 1000) * costPerToken;
     totalApiCost += apiCost;
 
-    res.status(200).json({ result: completion.data.choices[0].text });
+    res.status(200).json({ result: completion });
   } catch (error) {
     if (error.response) {
       console.error(error.response.status, error.response.data);
@@ -63,14 +73,4 @@ export default async function (req, res) {
       });
     }
   }
-}
-
-function generatePrompt(question) {
-  const capitalizedQuestion =
-    question[0].toUpperCase() + question.slice(1).toLowerCase();
-  return `
-  Prompt: ${capitalizedQuestion}
-
-  Read above prompt and fact check only with exact phrases "True" or "False" or "I Don't Know.".
-`;
 }
