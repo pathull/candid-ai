@@ -7,9 +7,9 @@ Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, j
    
   <img width="300px" height="600px" src="https://github.com/pathull/candid-ai/assets/94504789/6852924c-6cf7-4fc1-a012-6351a0aec695.jpg" />
 
-  <img src="https://github.com/pathull/candid-ai/assets/94504789/abe5ea52-3803-484f-8a2f-f0ca64b6a494.jpg" />
+  <img width="300px" height="600px" src="https://github.com/pathull/candid-ai/assets/94504789/abe5ea52-3803-484f-8a2f-f0ca64b6a494.jpg" />
 
-  <img src="https://github.com/pathull/candid-ai/assets/94504789/ceba62ca-22b4-458d-9bc1-53b7a77caf61.jpg" />
+  <img width="300px" height="600px" src="https://github.com/pathull/candid-ai/assets/94504789/ceba62ca-22b4-458d-9bc1-53b7a77caf61.jpg" />
    
 </div>
 
