@@ -1,6 +1,6 @@
 ## Summary
 
-Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, just curious about AI's bottom-line on something? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's powerful text-davinci-003 model. Enjoy!
+Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, just curious about AI's bottom-line on something? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's text-davinci-003 model.
 
 
 <div align="center" display="flex" flexDirection="column">
