@@ -3,7 +3,7 @@
 Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, just curious about AI's bottom-line on something? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's powerful text-davinci-003 model. Enjoy!
 
 
-<p align="center">
+<p align="center" display="flex" flex-direction="column">
    
   <img src="https://github.com/pathull/candid-ai/assets/94504789/6852924c-6cf7-4fc1-a012-6351a0aec695.jpg" />
 
