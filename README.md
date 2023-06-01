@@ -1,6 +1,6 @@
 ## Summary
 
-Need a quick fact checker? Want to win (or lose) an arguement quickly? Or, just curious about AI's bottom-line on a topic? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's gpt-3.5-turbo model.
+Need a quick fact checker? Want to win (or lose) an argument quickly? Or, just curious about AI's bottom-line on a topic? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's gpt-3.5-turbo model.
 
 
 <div align="center" display="flex" flexDirection="column">
