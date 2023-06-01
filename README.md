@@ -2,6 +2,17 @@
 
 Need a quick and frank answer? Want to win (or lose) an arguement quickly? Or, just curious about AI's bottom-line on something? Look no further than Candid AI! There are only three possible answers: "True", "False", and "I Don't Know." This app is powered by OpenAI's powerful text-davinci-003 model. Enjoy!
 
+
+<p align="center">
+   
+  <img src="https://github.com/pathull/candid-ai/assets/94504789/6852924c-6cf7-4fc1-a012-6351a0aec695.jpg" />
+
+  <img src="https://github.com/pathull/candid-ai/assets/94504789/abe5ea52-3803-484f-8a2f-f0ca64b6a494.jpg" />
+
+  <img src="https://github.com/pathull/candid-ai/assets/94504789/ceba62ca-22b4-458d-9bc1-53b7a77caf61.jpg" />
+   
+</p>
+
 ## Setup
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) (Node.js version >= 14.6.0 required)
